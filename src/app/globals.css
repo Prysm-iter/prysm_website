@@ -179,6 +179,19 @@
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
 }
 
+/* ========= Floating glass nav fallback & polish =========
+   .glass-nav provides a slightly stronger fallback for browsers
+   that don't render backdrop-filter or need an explicit border/shadow.
+*/
+.glass-nav {
+  background-color: rgba(14, 18, 23, 0.45); /* slightly dark fallback */
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+}
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
