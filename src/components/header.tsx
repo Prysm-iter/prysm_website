@@ -1,7 +1,7 @@
+// src/components/header.tsx
 "use client";
 
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -9,100 +9,122 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Menu, ShoppingCart } from "lucide-react";
 
-const navigationItems = [
-  { name: "Home", href: "/" },
-  { name: "Community", href: "/community" },
-  { name: "Events", href: "/events" },
-  { name: "Newsletter", href: "/newsletter" },
-  { name: "About Us", href: "/about" },
-  { name: "Contact", href: "/contact" },
-];
+/**
+ * Floating glassmorphism header
+ * - fixed, centered, pill-shaped
+ * - backdrop blur (uses Tailwind utilities)
+ * - responsive: desktop shows inline links, mobile uses existing Sheet
+ *
+ * Notes:
+ * - Layout imports this named export: `Header` (keep it as a named export)
+ * - The bottom spacer div prevents main content from sitting behind the fixed nav.
+ */
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center justify-between px-4 md:px-6">
-        {/* Logo */}
-        <Link href="/" className="flex items-center space-x-2">
-          <Image
-            src="/logo.svg"
-            alt="Prysm Club logo"
-            width={32}
-            height={32}
-            className="rounded-full"
-          />
-          <span className="font-bold text-lg">SOA Prysm Club</span>
-        </Link>
+  const nav = [
+    { name: "Home", href: "/" },
+    { name: "Community", href: "/community" },
+    { name: "Events", href: "/events" },
+    { name: "Newsletter", href: "/newsletter" },
+    { name: "About Us", href: "/about" },
+    { name: "Contact", href: "/contact" },
+  ];
 
-        {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center space-x-6">
-          <nav className="flex items-center space-x-6">
-            {navigationItems.map((item) => (
+  return (
+    <>
+      {/* fixed wrapper that centers the pill across the page */}
+      <div className="fixed inset-x-0 top-6 flex justify-center z-50 pointer-events-none">
+        <nav
+          className="pointer-events-auto w-[min(95%,1100px)] 
+                     glass-nav backdrop-blur-md bg-slate-900/30 dark:bg-black/30
+                     border border-white/6 rounded-full px-4 py-2 shadow-[0_10px_30px_rgba(2,6,23,0.6)]
+                     flex items-center justify-between gap-4"
+          aria-label="Main navigation"
+        >
+          {/* left: logo */}
+          <div className="flex items-center gap-3">
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="/logo.png" alt="SOA Prysm Club" width={36} height={36} />
+              <span className="hidden sm:inline font-semibold text-white">
+                SOA Prysm Club
+              </span>
+            </Link>
+          </div>
+
+          {/* center: nav links (hidden on small screens) */}
+          <div className="hidden md:flex gap-8 items-center">
+            {nav.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:text-primary"
+                className="text-sm text-slate-200 hover:text-white transition-colors"
               >
                 {item.name}
               </Link>
             ))}
-          </nav>
-          <ThemeToggle />
-        </div>
+          </div>
 
-        {/* Mobile Navigation */}
-        <div className="flex items-center space-x-2 md:hidden">
-          <ThemeToggle />
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" aria-label="Open menu">
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px]">
-              <SheetHeader>
-                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              </SheetHeader>
-              <div className="flex flex-col space-y-4 mt-6">
-                {/* Mobile Logo */}
-                <Link
-                  href="/"
-                  className="flex items-center space-x-2 pb-4 border-b"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <div className="h-8 w-8 rounded-full bg-primary flex items-center justify-center">
-                    <span className="text-primary-foreground font-bold text-sm">
-                      PC
-                    </span>
-                  </div>
-                  <span className="font-bold text-lg">Prysm Club</span>
-                </Link>
+          {/* right: controls */}
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
 
-                {/* Mobile Navigation Links */}
-                <nav className="flex flex-col space-y-4">
-                  {navigationItems.map((item) => (
-                    <Link
-                      key={item.name}
-                      href={item.href}
-                      className="text-lg font-medium transition-colors hover:text-primary py-2"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-            </SheetContent>
-          </Sheet>
-        </div>
+            {/* cart icon - hidden on smallest screens */}
+            <ShoppingCart className="hidden sm:inline h-5 w-5 text-slate-100" />
+
+            {/* CTA: Contact — styled as white pill like your reference */}
+            <Link
+              href="/contact"
+              className="hidden md:inline-block rounded-full bg-white text-black px-4 py-2 text-sm font-medium shadow-sm"
+            >
+              Contact us
+            </Link>
+
+            {/* mobile menu trigger (Sheet) */}
+            <div className="md:hidden">
+              <Sheet open={isOpen} onOpenChange={setIsOpen}>
+                <SheetTrigger asChild>
+                  <button
+                    aria-label="Open menu"
+                    className="p-2 rounded-md text-slate-100 bg-transparent"
+                  >
+                    <Menu />
+                  </button>
+                </SheetTrigger>
+
+                <SheetContent side="right" className="w-full max-w-xs">
+                  <SheetHeader>
+                    <SheetTitle>Menu</SheetTitle>
+                  </SheetHeader>
+
+                  <nav className="flex flex-col gap-4 mt-4">
+                    {nav.map((item) => (
+                      <Link
+                        key={item.name}
+                        href={item.href}
+                        className="text-lg font-medium"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </nav>
+                </SheetContent>
+              </Sheet>
+            </div>
+          </div>
+        </nav>
       </div>
-    </header>
+
+      {/* spacer so the page content isn't covered by the fixed nav
+          - height matches the nav height on desktop and mobile */}
+      <div className="h-20 md:h-24" aria-hidden />
+    </>
   );
 }
