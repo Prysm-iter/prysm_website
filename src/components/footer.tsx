@@ -68,8 +68,8 @@ export function Footer() {
               <span className="font-bold text-lg">SOA Prysm Club</span>
             </Link>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
-              "Illuminating minds, fostering innovation, and building the future
-              through technology and collaboration."
+              Illuminating minds, fostering innovation, and building the future
+              through technology and collaboration.
             </p>
           </div>
 

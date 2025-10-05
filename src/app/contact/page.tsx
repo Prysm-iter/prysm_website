@@ -26,7 +26,7 @@ export default function ContactPage() {
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Have questions about joining Prysm Club? Want to collaborate on a
-            project? We'd love to hear from you!
+            project? We&apos;d love to hear from you!
           </p>
         </div>
 
@@ -36,7 +36,7 @@ export default function ContactPage() {
             <CardHeader>
               <CardTitle>Send us a message</CardTitle>
               <CardDescription>
-                Fill out the form below and we'll get back to you as soon as
+                Fill out the form below and we&apos;ll get back to you as soon as
                 possible.
               </CardDescription>
             </CardHeader>
@@ -63,7 +63,7 @@ export default function ContactPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="What's this about?" />
+                <Input id="subject" placeholder="What&apos;s this about?" />
               </div>
 
               <div className="space-y-2">

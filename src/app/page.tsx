@@ -25,7 +25,7 @@ export default function HomePage() {
               <span className="text-primary block">Fostering Innovation</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed">
-              Join Prysm Club where technology meets creativity. We're building
+              Join Prysm Club where technology meets creativity. We&apos;re building
               the future through collaborative projects, cutting-edge workshops,
               and a community of passionate innovators.
             </p>
@@ -121,7 +121,7 @@ export default function HomePage() {
               Ready to Join the Innovation?
             </h2>
             <p className="text-muted-foreground text-lg">
-              Be part of a community that's shaping the future of technology.
+              Be part of a community that&apos;s shaping the future of technology.
               Connect, learn, and build amazing things together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

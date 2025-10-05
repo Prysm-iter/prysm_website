@@ -15,7 +15,7 @@ export default function CommunityPage() {
           </Badge>
           <h1 className="text-4xl font-bold mb-4">Join Our Community</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Connect with like-minded innovators, collaborate on projects, and be part of a vibrant community that's shaping the future of technology.
+            Connect with like-minded innovators, collaborate on projects, and be part of a vibrant community that&apos;s shaping the future of technology.
           </p>
         </div>
 
@@ -118,7 +118,7 @@ export default function CommunityPage() {
               <div>
                 <h4 className="font-semibold mb-2">Collaborate</h4>
                 <p className="text-sm text-muted-foreground">
-                  Work together on projects and support each other's goals.
+                  Work together on projects and support each other&apos;s goals.
                 </p>
               </div>
             </div>

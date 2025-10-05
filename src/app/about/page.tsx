@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <CardTitle className="text-lg">Innovation Projects</CardTitle>
                 <CardDescription>
                   Collaborative projects that tackle real-world problems and
-                  push the boundaries of what's possible with technology.
+                  push the boundaries of what&apos;s possible with technology.
                 </CardDescription>
               </CardHeader>
             </Card>
