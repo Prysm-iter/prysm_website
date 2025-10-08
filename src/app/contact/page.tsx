@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,7 +9,15 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Clock, Mail, MapPin, Phone, Github, Instagram, Linkedin } from "lucide-react";
+import {
+  Clock,
+  Github,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+} from "lucide-react";
 
 const socialLinks = [
   {
@@ -39,14 +46,15 @@ export default function ContactPage() {
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4" data-aos="fade-up">
-          <Badge variant="secondary" className="px-4 py-2">
+          {/* <Badge variant="secondary" className="px-4 py-2">
             Contact Us
-          </Badge>
+          </Badge> */}
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             Get In Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Interested in cybersecurity or app development? Want to collaborate on secure applications? We&apos;d love to hear from you!
+            Interested in cybersecurity or app development? Want to collaborate
+            on secure applications? We&apos;d love to hear from you!
           </p>
         </div>
 

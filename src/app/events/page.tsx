@@ -68,13 +68,13 @@ export default function EventsPage() {
   ];
 
   return (
-    <div className="px-4 py-16 md:px-6 md:py-24">
+    <div className="px-4 py-16 pt-32 pb-8 md:pt-40">
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Header */}
         <div className="text-center space-y-4">
-          <Badge variant="secondary" className="px-4 py-2">
+          {/* <Badge variant="secondary" className="px-4 py-2">
             Events
-          </Badge>
+          </Badge> */}
           <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
             Upcoming Events
           </h1>

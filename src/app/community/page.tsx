@@ -1,4 +1,3 @@
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -22,13 +21,15 @@ export default function CommunityPage() {
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12" data-aos="fade-up">
-          <Badge variant="secondary" className="mb-4">
+          {/* <Badge variant="secondary" className="mb-4">
             <Users className="w-4 h-4 mr-2" />
             Community
-          </Badge>
+          </Badge> */}
           <h1 className="text-4xl font-bold mb-4">Join Our Community</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Connect with cybersecurity enthusiasts and developers, collaborate on secure applications, and be part of a community dedicated to mastering both offensive and defensive security techniques.
+            Connect with cybersecurity enthusiasts and developers, collaborate
+            on secure applications, and be part of a community dedicated to
+            mastering both offensive and defensive security techniques.
           </p>
         </div>
 
@@ -41,7 +42,8 @@ export default function CommunityPage() {
                 Discord Server
               </CardTitle>
               <CardDescription>
-                Join our Discord community for cybersecurity discussions, code reviews, and collaborative security projects.
+                Join our Discord community for cybersecurity discussions, code
+                reviews, and collaborative security projects.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -56,7 +58,8 @@ export default function CommunityPage() {
                 GitHub Organization
               </CardTitle>
               <CardDescription>
-                Contribute to security tools, share secure coding practices, and collaborate on production-ready applications.
+                Contribute to security tools, share secure coding practices, and
+                collaborate on production-ready applications.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -107,7 +110,8 @@ export default function CommunityPage() {
           <CardHeader>
             <CardTitle>Community Guidelines</CardTitle>
             <CardDescription>
-              Help us maintain a secure, ethical, and collaborative learning environment for all members.
+              Help us maintain a secure, ethical, and collaborative learning
+              environment for all members.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -121,19 +125,22 @@ export default function CommunityPage() {
               <div data-aos="fade-up" data-aos-delay="500">
                 <h4 className="font-semibold mb-2">Ethical Security</h4>
                 <p className="text-sm text-muted-foreground">
-                  Practice responsible disclosure and ethical hacking principles in all security activities.
+                  Practice responsible disclosure and ethical hacking principles
+                  in all security activities.
                 </p>
               </div>
               <div data-aos="fade-up" data-aos-delay="600">
                 <h4 className="font-semibold mb-2">Code Quality</h4>
                 <p className="text-sm text-muted-foreground">
-                  Focus on secure coding practices and production-ready application development.
+                  Focus on secure coding practices and production-ready
+                  application development.
                 </p>
               </div>
               <div data-aos="fade-up" data-aos-delay="700">
                 <h4 className="font-semibold mb-2">Constructive Feedback</h4>
                 <p className="text-sm text-muted-foreground">
-                  Provide meaningful, actionable feedback on projects to help members improve their skills.
+                  Provide meaningful, actionable feedback on projects to help
+                  members improve their skills.
                 </p>
               </div>
             </div>
