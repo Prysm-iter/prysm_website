@@ -1,34 +1,47 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Users, MessageCircle, Github, Calendar, Trophy, Heart } from "lucide-react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Calendar,
+  Github,
+  Heart,
+  MessageCircle,
+  Trophy,
+  Users,
+} from "lucide-react";
 
 export default function CommunityPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 pt-32 pb-8 md:pt-40">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-aos="fade-up">
           <Badge variant="secondary" className="mb-4">
             <Users className="w-4 h-4 mr-2" />
             Community
           </Badge>
           <h1 className="text-4xl font-bold mb-4">Join Our Community</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Connect with like-minded innovators, collaborate on projects, and be part of a vibrant community that&apos;s shaping the future of technology.
+            Connect with cybersecurity enthusiasts and developers, collaborate on secure applications, and be part of a community dedicated to mastering both offensive and defensive security techniques.
           </p>
         </div>
 
         {/* Community Platforms */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <Card>
+          <Card data-aos="fade-right" data-aos-delay="100">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <MessageCircle className="w-5 h-5" />
                 Discord Server
               </CardTitle>
               <CardDescription>
-                Join our active Discord community for real-time discussions, project collaboration, and networking.
+                Join our Discord community for cybersecurity discussions, code reviews, and collaborative security projects.
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -36,25 +49,27 @@ export default function CommunityPage() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card data-aos="fade-left" data-aos-delay="200">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Github className="w-5 h-5" />
                 GitHub Organization
               </CardTitle>
               <CardDescription>
-                Contribute to open-source projects, share your code, and collaborate with fellow developers.
+                Contribute to security tools, share secure coding practices, and collaborate on production-ready applications.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <Button variant="outline" className="w-full">View GitHub</Button>
+              <Button variant="outline" className="w-full">
+                View GitHub
+              </Button>
             </CardContent>
           </Card>
         </div>
 
         {/* Community Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
-          <Card className="text-center">
+          <Card className="text-center" data-aos="fade-up" data-aos-delay="100">
             <CardContent className="pt-6">
               <Users className="w-8 h-8 mx-auto mb-2 text-primary" />
               <div className="text-2xl font-bold">500+</div>
@@ -62,7 +77,7 @@ export default function CommunityPage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center" data-aos="fade-up" data-aos-delay="200">
             <CardContent className="pt-6">
               <Calendar className="w-8 h-8 mx-auto mb-2 text-primary" />
               <div className="text-2xl font-bold">50+</div>
@@ -70,7 +85,7 @@ export default function CommunityPage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center" data-aos="fade-up" data-aos-delay="300">
             <CardContent className="pt-6">
               <Trophy className="w-8 h-8 mx-auto mb-2 text-primary" />
               <div className="text-2xl font-bold">25+</div>
@@ -78,7 +93,7 @@ export default function CommunityPage() {
             </CardContent>
           </Card>
 
-          <Card className="text-center">
+          <Card className="text-center" data-aos="fade-up" data-aos-delay="400">
             <CardContent className="pt-6">
               <Heart className="w-8 h-8 mx-auto mb-2 text-primary" />
               <div className="text-2xl font-bold">100%</div>
@@ -88,37 +103,37 @@ export default function CommunityPage() {
         </div>
 
         {/* Community Guidelines */}
-        <Card>
+        <Card data-aos="fade-up" data-aos-delay="300">
           <CardHeader>
             <CardTitle>Community Guidelines</CardTitle>
             <CardDescription>
-              Help us maintain a welcoming and inclusive environment for everyone.
+              Help us maintain a secure, ethical, and collaborative learning environment for all members.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid md:grid-cols-2 gap-4">
-              <div>
+              <div data-aos="fade-up" data-aos-delay="400">
                 <h4 className="font-semibold mb-2">Be Respectful</h4>
                 <p className="text-sm text-muted-foreground">
                   Treat all community members with respect and kindness.
                 </p>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2">Share Knowledge</h4>
+              <div data-aos="fade-up" data-aos-delay="500">
+                <h4 className="font-semibold mb-2">Ethical Security</h4>
                 <p className="text-sm text-muted-foreground">
-                  Help others learn and grow by sharing your expertise.
+                  Practice responsible disclosure and ethical hacking principles in all security activities.
                 </p>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2">Stay On Topic</h4>
+              <div data-aos="fade-up" data-aos-delay="600">
+                <h4 className="font-semibold mb-2">Code Quality</h4>
                 <p className="text-sm text-muted-foreground">
-                  Keep discussions relevant to technology and innovation.
+                  Focus on secure coding practices and production-ready application development.
                 </p>
               </div>
-              <div>
-                <h4 className="font-semibold mb-2">Collaborate</h4>
+              <div data-aos="fade-up" data-aos-delay="700">
+                <h4 className="font-semibold mb-2">Constructive Feedback</h4>
                 <p className="text-sm text-muted-foreground">
-                  Work together on projects and support each other&apos;s goals.
+                  Provide meaningful, actionable feedback on projects to help members improve their skills.
                 </p>
               </div>
             </div>

@@ -10,14 +10,35 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, Github, Instagram, Linkedin } from "lucide-react";
+
+const socialLinks = [
+  {
+    name: "GitHub",
+    href: "https://github.com",
+    icon: Github,
+    label: "Follow us on GitHub",
+  },
+  {
+    name: "Instagram",
+    href: "https://instagram.com",
+    icon: Instagram,
+    label: "Follow us on Instagram",
+  },
+  {
+    name: "LinkedIn",
+    href: "https://linkedin.com",
+    icon: Linkedin,
+    label: "Connect with us on LinkedIn",
+  },
+];
 
 export default function ContactPage() {
   return (
-    <div className="px-4 py-16 md:px-6 md:py-24">
+    <div className="px-4 pt-32 pb-16 md:px-6 md:pt-40 md:pb-24">
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Header */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4" data-aos="fade-up">
           <Badge variant="secondary" className="px-4 py-2">
             Contact Us
           </Badge>
@@ -25,19 +46,18 @@ export default function ContactPage() {
             Get In Touch
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Have questions about joining Prysm Club? Want to collaborate on a
-            project? We&apos;d love to hear from you!
+            Interested in cybersecurity or app development? Want to collaborate on secure applications? We&apos;d love to hear from you!
           </p>
         </div>
 
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Contact Form */}
-          <Card>
+          <Card data-aos="fade-right" data-aos-delay="100">
             <CardHeader>
               <CardTitle>Send us a message</CardTitle>
               <CardDescription>
-                Fill out the form below and we&apos;ll get back to you as soon as
-                possible.
+                Fill out the form below and we&apos;ll get back to you as soon
+                as possible.
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -63,7 +83,7 @@ export default function ContactPage() {
 
               <div className="space-y-2">
                 <Label htmlFor="subject">Subject</Label>
-                <Input id="subject" placeholder="What&apos;s this about?" />
+                <Input id="subject" placeholder="What's this about?" />
               </div>
 
               <div className="space-y-2">
@@ -81,7 +101,7 @@ export default function ContactPage() {
 
           {/* Contact Information */}
           <div className="space-y-8">
-            <Card>
+            <Card data-aos="fade-left" data-aos-delay="200">
               <CardHeader>
                 <CardTitle>Contact Information</CardTitle>
                 <CardDescription>
@@ -89,7 +109,11 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="flex items-start gap-4">
+                <div
+                  className="flex items-start gap-4"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
@@ -104,7 +128,11 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div
+                  className="flex items-start gap-4"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
+                >
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
@@ -114,7 +142,11 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div
+                  className="flex items-start gap-4"
+                  data-aos="fade-up"
+                  data-aos-delay="500"
+                >
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
@@ -129,7 +161,11 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
+                <div
+                  className="flex items-start gap-4"
+                  data-aos="fade-up"
+                  data-aos-delay="600"
+                >
                   <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <Clock className="h-5 w-5 text-primary" />
                   </div>
@@ -146,7 +182,7 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            <Card>
+            <Card data-aos="fade-left" data-aos-delay="300">
               <CardHeader>
                 <CardTitle>Join Our Community</CardTitle>
                 <CardDescription>
@@ -154,43 +190,31 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <div className="grid grid-cols-2 gap-4">
-                  <Button variant="outline" asChild>
-                    <a
-                      href="https://discord.gg/prysmclub"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Discord
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a
-                      href="https://slack.prysmclub.edu"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Slack
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a
-                      href="https://github.com/prysmclub"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      GitHub
-                    </a>
-                  </Button>
-                  <Button variant="outline" asChild>
-                    <a
-                      href="https://linkedin.com/company/prysmclub"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      LinkedIn
-                    </a>
-                  </Button>
+                <div className="grid grid-cols-3 gap-4">
+                  {socialLinks.map((social) => {
+                    const IconComponent = social.icon;
+                    return (
+                      <Button
+                        key={social.name}
+                        variant="outline"
+                        size="sm"
+                        asChild
+                        className="justify-start space-x-2 h-auto py-3"
+                        data-aos="fade-up"
+                        data-aos-delay="400"
+                      >
+                        <a
+                          href={social.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={social.label}
+                        >
+                          <IconComponent className="h-4 w-4" />
+                          <span className="text-xs">{social.name}</span>
+                        </a>
+                      </Button>
+                    );
+                  })}
                 </div>
               </CardContent>
             </Card>

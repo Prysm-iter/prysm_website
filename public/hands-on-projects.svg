@@ -1,0 +1,64 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="150" rx="12" fill="url(#gradient4)"/>
+  <defs>
+    <linearGradient id="gradient4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Code Editor Window -->
+  <g transform="translate(30, 25)">
+    <rect x="0" y="0" width="80" height="60" rx="4" fill="#8b5cf6" opacity="0.8"/>
+    <rect x="0" y="0" width="80" height="12" rx="4" fill="#8b5cf6"/>
+    <circle cx="8" cy="6" r="2" fill="white" opacity="0.8"/>
+    <circle cx="16" cy="6" r="2" fill="white" opacity="0.6"/>
+    <circle cx="24" cy="6" r="2" fill="white" opacity="0.4"/>
+    
+    <!-- Code Lines -->
+    <rect x="4" y="18" width="30" height="2" rx="1" fill="white" opacity="0.7"/>
+    <rect x="8" y="24" width="25" height="2" rx="1" fill="white" opacity="0.5"/>
+    <rect x="8" y="30" width="35" height="2" rx="1" fill="white" opacity="0.5"/>
+    <rect x="4" y="36" width="20" height="2" rx="1" fill="white" opacity="0.7"/>
+    <rect x="8" y="42" width="28" height="2" rx="1" fill="white" opacity="0.5"/>
+    <rect x="4" y="48" width="15" height="2" rx="1" fill="white" opacity="0.7"/>
+  </g>
+  
+  <!-- Gears -->
+  <g transform="translate(130, 40)">
+    <g transform="rotate(0)">
+      <circle cx="15" cy="15" r="12" fill="none" stroke="#8b5cf6" stroke-width="3" opacity="0.6"/>
+      <circle cx="15" cy="15" r="6" fill="#8b5cf6" opacity="0.4"/>
+      <rect x="13" y="2" width="4" height="6" fill="#8b5cf6" opacity="0.6"/>
+      <rect x="13" y="22" width="4" height="6" fill="#8b5cf6" opacity="0.6"/>
+      <rect x="2" y="13" width="6" height="4" fill="#8b5cf6" opacity="0.6"/>
+      <rect x="22" y="13" width="6" height="4" fill="#8b5cf6" opacity="0.6"/>
+    </g>
+  </g>
+  
+  <g transform="translate(145, 70)">
+    <g transform="rotate(45)">
+      <circle cx="10" cy="10" r="8" fill="none" stroke="#8b5cf6" stroke-width="2" opacity="0.4"/>
+      <circle cx="10" cy="10" r="4" fill="#8b5cf6" opacity="0.3"/>
+      <rect x="9" y="1" width="2" height="4" fill="#8b5cf6" opacity="0.4"/>
+      <rect x="9" y="15" width="2" height="4" fill="#8b5cf6" opacity="0.4"/>
+      <rect x="1" y="9" width="4" height="2" fill="#8b5cf6" opacity="0.4"/>
+      <rect x="15" y="9" width="4" height="2" fill="#8b5cf6" opacity="0.4"/>
+    </g>
+  </g>
+  
+  <!-- Tools -->
+  <g transform="translate(20, 100)" opacity="0.4" stroke="#8b5cf6" stroke-width="2" fill="none">
+    <!-- Wrench -->
+    <path d="M5 5 L15 15 M10 5 L15 10"/>
+    <!-- Hammer -->
+    <path d="M25 10 L35 10 M30 5 L30 15 M35 8 L35 12"/>
+  </g>
+  
+  <!-- Project Folder -->
+  <g transform="translate(120, 100)">
+    <path d="M0 5 L8 5 L10 0 L25 0 L25 20 L0 20 Z" fill="#8b5cf6" opacity="0.5"/>
+    <rect x="3" y="8" width="19" height="2" rx="1" fill="white" opacity="0.6"/>
+    <rect x="3" y="12" width="15" height="2" rx="1" fill="white" opacity="0.4"/>
+  </g>
+</svg>

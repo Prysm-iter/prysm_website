@@ -1,0 +1,33 @@
+<svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="150" rx="12" fill="url(#gradient1)"/>
+  <defs>
+    <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:0.1"/>
+      <stop offset="100%" style="stop-color:#1d4ed8;stop-opacity:0.2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Shield Icon -->
+  <g transform="translate(75, 30)">
+    <path d="M25 10 L25 5 C25 2.24 22.76 0 20 0 L5 0 C2.24 0 0 2.24 0 5 L0 10 C0 20 12.5 30 12.5 30 S25 20 25 10 Z" fill="#3b82f6" opacity="0.8"/>
+    <path d="M12.5 8 L8 12 L6 10" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Binary Code Background -->
+  <g opacity="0.3" fill="#3b82f6">
+    <text x="20" y="100" font-family="monospace" font-size="8">1010110</text>
+    <text x="140" y="120" font-family="monospace" font-size="8">0110101</text>
+    <text x="30" y="130" font-family="monospace" font-size="8">1100110</text>
+  </g>
+  
+  <!-- Lock Icons -->
+  <g transform="translate(140, 80)" opacity="0.4">
+    <rect x="0" y="8" width="12" height="8" rx="1" fill="#3b82f6"/>
+    <path d="M2 8 V6 C2 3.79 3.79 2 6 2 S10 3.79 10 6 V8" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  </g>
+  
+  <g transform="translate(30, 80)" opacity="0.4">
+    <rect x="0" y="8" width="12" height="8" rx="1" fill="#3b82f6"/>
+    <path d="M2 8 V6 C2 3.79 3.79 2 6 2 S10 3.79 10 6 V8" stroke="#3b82f6" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>

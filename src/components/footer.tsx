@@ -1,13 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import {
-  Facebook,
-  Github,
-  Instagram,
-  Linkedin,
-  Twitter,
-  Youtube,
-} from "lucide-react";
+import { Github, Instagram, Linkedin } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -30,29 +23,11 @@ const socialLinks = [
     icon: Linkedin,
     label: "Connect with us on LinkedIn",
   },
-  {
-    name: "YouTube",
-    href: "https://youtube.com",
-    icon: Youtube,
-    label: "Subscribe to our YouTube channel",
-  },
-  {
-    name: "Facebook",
-    href: "https://facebook.com",
-    icon: Facebook,
-    label: "Like us on Facebook",
-  },
-  {
-    name: "X (Twitter)",
-    href: "https://x.com",
-    icon: Twitter,
-    label: "Follow us on X",
-  },
 ];
 
 export function Footer() {
   return (
-    <footer className="border-t bg-background">
+    <footer className="border-t bg-background z-50">
       <div className="px-4 py-12 md:px-6">
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Club Logo and Motto */}
@@ -76,7 +51,7 @@ export function Footer() {
           {/* Social Media Links */}
           <div className="space-y-4 lg:col-span-2">
             <h3 className="font-semibold text-lg">Connect With Us</h3>
-            <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+            <div className="grid gap-4 grid-cols-3">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
                 return (

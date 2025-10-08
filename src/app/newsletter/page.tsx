@@ -7,7 +7,7 @@ import { Mail, Calendar, Users, TrendingUp, Archive } from "lucide-react";
 
 export default function NewsletterPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 pt-32 pb-8 md:pt-40">
       <div className="max-w-4xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-12">
