@@ -1,6 +1,4 @@
-import LetterGlitch from "@/components/LetterGlitch";
 import { NewsletterSection } from "@/components/newsletter-section";
-import PixelBlast from "@/components/PixelBlast";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -116,7 +114,10 @@ export default function HomePage() {
                   data-aos="fade-left"
                   data-aos-delay="100"
                 >
-                  <Badge variant="secondary" className="px-4 py-2 w-fit bg-white/10 dark:bg-black/10 backdrop-blur-xl border-white/20 dark:border-white/10 shadow-lg shadow-black/10">
+                  <Badge
+                    variant="secondary"
+                    className="px-4 py-2 w-fit bg-white/10 dark:bg-black/10 backdrop-blur-xl border-white/20 dark:border-white/10 shadow-lg shadow-black/10"
+                  >
                     Welcome to Innovation
                   </Badge>
                   <h1 className="text-5xl font-bold tracking-tighter xl:text-6xl">
@@ -222,8 +223,8 @@ export default function HomePage() {
                 <CardHeader>
                   <CardTitle>Peer Feedback</CardTitle>
                   <CardDescription>
-                    Get real-world feedback on your projects from experienced club
-                    members and industry mentors
+                    Get real-world feedback on your projects from experienced
+                    club members and industry mentors
                   </CardDescription>
                 </CardHeader>
               </Card>
@@ -264,9 +265,9 @@ export default function HomePage() {
                     Ready to Master Cybersecurity & Development?
                   </h2>
                   <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                    Join our community of security enthusiasts and developers. Start
-                    building production-ready applications while learning to protect
-                    them.
+                    Join our community of security enthusiasts and developers.
+                    Start building production-ready applications while learning
+                    to protect them.
                   </p>
                   <div
                     className="flex flex-col sm:flex-row gap-4 justify-center"
