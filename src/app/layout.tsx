@@ -1,12 +1,11 @@
 import { AOSInit } from "@/components/aos-init";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import Prism from "@/components/Prism";
 import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oxygen, Oxygen_Mono } from "next/font/google";
 import "./globals.css";
-import DotGrid from "@/components/DotGrid";
-import Prism from "@/components/Prism";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
