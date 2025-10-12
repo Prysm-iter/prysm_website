@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Oxygen, Oxygen_Mono } from "next/font/google";
 import "./globals.css";
+import DotGrid from "@/components/DotGrid";
+import Prism from "@/components/Prism";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,16 +58,45 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${oxygen.variable} ${oxygenMono.variable} antialiased min-h-screen flex flex-col`}
+        className={`${oxygen.variable} ${oxygenMono.variable} antialiased min-h-screen flex flex-col dark`}
       >
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
           <AOSInit />
           <Header />
+          <div
+            style={{ position: "fixed", width: "100%", height: "100%" }}
+            // className="pt-[8%]"
+          >
+            {/* <DotGrid
+              dotSize={2}
+              gap={12}
+              baseColor="#5227FF"
+              activeColor="#5227FF"
+              proximity={120}
+              shockRadius={150}
+              shockStrength={3}
+              resistance={750}
+              returnDuration={1.5}
+            /> */}
+
+            <Prism
+              animationType="3drotate"
+              timeScale={0.5}
+              height={3.5}
+              baseWidth={5.5}
+              scale={2.1}
+              hueShift={0}
+              transparent={true}
+              colorFrequency={1}
+              noise={0}
+              glow={1}
+            />
+          </div>
           <main className="flex-1">{children}</main>
           <Footer />
         </ThemeProvider>

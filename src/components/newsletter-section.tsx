@@ -40,18 +40,18 @@ export function NewsletterSection() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-br from-primary/5 via-secondary/5 to-primary/10 relative overflow-hidden">
+    <section className="py-10 relative overflow-hidden">
       {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid-16" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-50" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-50" />
+      {/* <div className="absolute inset-0 bg-grid-white/[0.02] bg-grid-16" /> */}
+      {/* <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl opacity-50" />
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl opacity-50" /> */}
 
       <div className="container mx-auto px-4 relative">
         <div className="max-w-6xl mx-auto">
-          <Card className="border-0 shadow-2xl bg-background/95 backdrop-blur-xl relative overflow-hidden">
+          <Card className="dark:bg-black/50 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-3xl relative overflow-hidden ">
             {/* Gradient border effect */}
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 rounded-lg blur-sm" />
-            <div className="relative bg-background rounded-lg m-[1px]">
+            <div className="absolute inset-0 rounded-lg blur-sm" />
+            <div className="relative rounded-lg m-[1px]">
               <CardHeader className="text-center pb-8 pt-12">
                 <div className="flex justify-center mb-6" data-aos="fade-up">
                   <div className="relative">

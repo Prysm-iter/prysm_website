@@ -88,7 +88,7 @@ export function Header() {
                   key={item.name}
                   href={item.href}
                   className={`font-medium transition-all duration-300 hover:text-primary hover:scale-105 ${
-                    isScrolled ? "text-xs" : "text-sm"
+                    isScrolled ? "text-sm" : "text-md"
                   }`}
                 >
                   {item.name}
@@ -96,13 +96,13 @@ export function Header() {
               ))}
             </nav>
             <div className="ml-4">
-              <ThemeToggle />
+              {/* <ThemeToggle /> */}
             </div>
           </div>
 
           {/* Mobile Navigation */}
           <div className="flex items-center space-x-2 md:hidden">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
                 <Button
